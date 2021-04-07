@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.17)
 project(template_demo VERSION 1.0
         DESCRIPTION "Template starter for C projects"
-        LANGUAGES C)
+        LANGUAGES C CXX)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
