@@ -1,11 +1,15 @@
-set(HEADER_LIST "${PROJECT_SOURCE_DIR}/include/template_demo/library.h")
+set(PROJECT_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/include")
+# Add all header files to this set
+set(HEADER_LIST
+        "${PROJECT_INCLUDE_DIR}/template_demo/library.h"
+        )
 
-add_library(template_library library.c ${HEADER_LIST})
-target_include_directories(template_library PUBLIC ${PROJECT_SOURCE_DIR}/include)
-target_compile_features(template_library PUBLIC c_std_11)
+# Add all source files to this set
+set(SOURCE_FILES
+        library.c
+        )
 
-source_group(
-        TREE "${PROJECT_SOURCE_DIR}/include"
-        PREFIX "Header Files"
-        FILES ${HEADER_LIST}
-)
+# Add the source and header sets to the library
+add_library(${LIBRARY_NAME} ${SOURCE_FILES} ${HEADER_LIST})
+target_include_directories(${LIBRARY_NAME} PUBLIC ${PROJECT_INCLUDE_DIR})
+target_compile_features(${LIBRARY_NAME} PUBLIC c_std_11)

@@ -1,6 +1,5 @@
 #pragma once
-
-// Added in case the project gets compiled as C++.
+// If the project gets compiled as C++, this will prevent namespace mangling.
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -8,7 +7,7 @@ extern "C" {
 /**
  * Say hello to the world!
  */
-void hello(void);
+char *hello(void);
 
 #ifdef __cplusplus
 }

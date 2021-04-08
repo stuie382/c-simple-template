@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "template_demo/library.h"
 
 /**
@@ -6,6 +7,6 @@
  * @return  0 on success, otherwise an error code.
  */
 int main(void) {
-    hello();
+    printf("%s",hello());
     return 0;
 }

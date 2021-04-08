@@ -29,4 +29,4 @@ The first thing you should do is to checkout and build this project as is, to en
 * Once Make has finished, go into the `app` directory and run the binary called 'app'. This should print 'Hello World' to the console.
 * Then go into the 'tests' directory and run the 'template-demo-test' binary. This should report OK.
 
-If you have got this far, then the next step is to start to customise the project for your needs. Go through all 4 CMakeLists.txt files and rename any references to 'template' and 'template_demo' to be appropriate for your project, and remove `library.c` and `library.h` as files as well as from the CMakeLists.txt files. Then start creating your source code. Remember to add new source and header files to `src/CMakeLists.txt`
+If you have got this far, then the next step is to start to customise the project for your needs. The CMakeLists.txt in the project root currently has the PROJECT_NAME variable set to 'CHANGE-ME', so this should be changed. The project also has a description that needs to be updated to reflect your project. After that, it's up to you.
